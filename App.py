@@ -98,7 +98,7 @@ def main():
             #  model1 = pickle.load(file)
          model1=joblib.load('model.pkl')
          st.write('The prediction of Selling Price is')
-         st.write(pd.DataFrame(model1.predict(a)[0]))
+         st.write(pd.DataFrame(model1.predict(a)))
     
     
     
