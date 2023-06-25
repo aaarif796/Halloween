@@ -8,12 +8,13 @@ Created on Thu Jun 22 14:05:37 2023
 import streamlit as st
 import pickle
 
+
+
 st.title("Apps for Prediction using Random Regressor Algorithm")
 def main():
-   
     st.write("Kindly enter the required value")
-
-
+    
+    
     
     
     # # stall_no=10
@@ -27,9 +28,9 @@ def main():
     # c2=11
     # mp=5000
     # mxp=7000
-
-
-
+    
+    
+    
     stall = st.slider("Select the Stall number", 1, 50)
     mc = st.number_input("Enter a market category", min_value = 0, max_value = 471)
     Lc = st.radio("Kindly verify whether the customer is loyal or not", ("Yes", "No"))
@@ -89,17 +90,16 @@ def main():
     
     
     
-    
     button = st.button('predict1')
     if button:
          with open('model.pkl', 'rb') as file:
               model1 = pickle.load(file)
          
          predict1 = model1.predict(a)
-         predict1=predict1[0]
-         st.write('The prediction of Selling Price is', str(predict1))
-
-
+         predict1=str(predict1[0])
+         st.write('The prediction of Selling Price is', predict1)
+    
+    
+    
 if __name__ == '__main__':
     main()
-
