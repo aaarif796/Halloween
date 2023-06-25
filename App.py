@@ -64,11 +64,12 @@ def main():
     
     #with open('model_pc.pkl', 'rb') as file:
     #     model_pc = pickle.load(file)
-    model_pc=joblib.load('model_pc.pkl')
+   # model_pc=joblib.load('model_pc.pkl')
+    
          
     
-    pc = model_pc.transform([category])
-    
+    #pc = model_pc.transform([category])
+    pc=cat.index(category)
     g = st.number_input('Enter Grade', value =  0, min_value = 0, max_value = 3, format = "%d" )
     dem = st.number_input("Kindly enter the demand value", value = 50, min_value = 1,max_value = 100, format = "%d" )
     da = st.number_input("Kindly enter the discount available", value = 0, min_value = 0, max_value = 90)
