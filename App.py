@@ -6,7 +6,7 @@ Created on Thu Jun 22 14:05:37 2023
 """
 
 import streamlit as st
-import pickle
+import joblib
 
 
 
@@ -62,8 +62,9 @@ def main():
     # c = st.checkbox("Child_care")
     
     
-    with open('model_pc.pkl', 'rb') as file:
-         model_pc = pickle.load(file)
+    #with open('model_pc.pkl', 'rb') as file:
+    #     model_pc = pickle.load(file)
+    model_pc=joblib.load('model_pc.pkl')
          
     
     pc = model_pc.transform([category])
@@ -92,8 +93,9 @@ def main():
     
     button = st.button('predict1')
     if button:
-         with open('model.pkl', 'rb') as file:
-              model1 = pickle.load(file)
+         #with open('model.pkl', 'rb') as file:
+            #  model1 = pickle.load(file)
+         model1=joblib.load('model.pkl')
          st.write('The prediction of Selling Price is', str(model1.predict(a)[0]))
     
     
