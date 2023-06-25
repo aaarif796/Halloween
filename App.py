@@ -96,6 +96,7 @@ if button:
           model1 = pickle.load(file)
      
      predict1 = model1.predict(a)
+     predict1=str(predict1[0])
      st.write('The prediction of Selling Price is', predict1)
 
 
