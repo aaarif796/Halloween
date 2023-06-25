@@ -8,9 +8,9 @@ Created on Thu Jun 22 14:05:37 2023
 import streamlit as st
 import pickle
 
-
+st.title("Apps for Prediction using Random Regressor Algorithm")
 def main():
-    st.title("Apps for Prediction using Random Regressor Algorithm")
+   
     st.write("Kindly enter the required value")
 
 
@@ -99,6 +99,7 @@ def main():
          predict1=predict1[0]
          st.write('The prediction of Selling Price is', str(predict1))
 
-if __init__ == '__main__':
+
+if __name__ == '__main__':
     main()
 
