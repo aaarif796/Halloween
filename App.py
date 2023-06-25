@@ -7,7 +7,7 @@ Created on Thu Jun 22 14:05:37 2023
 
 import streamlit as st
 import joblib
-
+import pandas as pd
 
 
 st.title("Apps for Prediction using Random Regressor Algorithm")
@@ -97,7 +97,7 @@ def main():
             #  model1 = pickle.load(file)
          model1=joblib.load('model.pkl')
          st.write('The prediction of Selling Price is')
-         st.write(model1.predict(a))
+         st.write(pd.DataFrame(model1.predict(a)))
     
     
     
